@@ -1,5 +1,5 @@
 {
-  "name": "niceplay-config",
+  "name": "niceplay-pkg-player",
   "version": "0.0.1",
   "main": "lib/pkg.js",
   "devDependencies": {
@@ -13,10 +13,6 @@
     "load-grunt-tasks": "^0.4.0"
   },
   "dependencies": {
-    "config-chain": "^1.1.8",
-    "dotty": "0.0.2",
-    "emissary": "^1.2.1",
-    "fs-plus": "^2.2.2",
-    "lodash": "^2.4.1"
+    "video.js": "^4.5.2"
   }
 }
