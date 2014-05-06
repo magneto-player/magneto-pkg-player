@@ -1,6 +1,6 @@
 {
   "name": "niceplay-pkg-player",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/pkg.js",
   "devDependencies": {
     "grunt": "^0.4.4",
