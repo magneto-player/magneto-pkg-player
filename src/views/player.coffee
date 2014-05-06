@@ -1,5 +1,6 @@
 
 {View} = niceplay.Views
+videojs = require 'video.js/dist/video-js/video.dev.js'
 
 class PlayerView extends View
   @content: ->
@@ -15,10 +16,7 @@ class PlayerView extends View
     @video = @find('video').get(0)
 
     # Init video.js
-    videojs = require 'video.js/dist/video-js/video.dev.js'
     niceplay.stylesheets.require('video.js/dist/video-js/video-js')
-
-    console.log @video
 
     @player = videojs @video
     @player.ready =>
