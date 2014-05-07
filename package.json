@@ -2,6 +2,9 @@
   "name": "niceplay-pkg-player",
   "version": "0.0.4",
   "main": "lib/pkg.js",
+  "scripts": {
+    "prepublish": "grunt src"
+  },
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-coffeelint": "0.0.10",
