@@ -15,11 +15,8 @@ class PlayerView extends View
   initialize: ->
     @video = @find('video').get(0)
 
-    # Init video.js
-    niceplay.stylesheets.require('video.js/dist/video-js/video-js')
-
     @player = videojs @video
-    @player.ready =>
+    @player.ready ->
       niceplay.emit('player:ready')
 
   setFile: (url, play = true) ->
