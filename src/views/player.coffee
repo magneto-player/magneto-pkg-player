@@ -20,7 +20,7 @@ class PlayerView extends View
   @content: ->
     @div id: 'player', =>
       @video
-        class: 'video-js vjs-default-skin vjs-big-play-centered'
+        class: 'video-js vjs-niceplay-skin'
         controls: true
         preload: 'auto'
         width: '100%'
