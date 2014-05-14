@@ -14,6 +14,7 @@ class Player
     niceplay.on '!player:toggle', @toggle
 
   load: (url) =>
+    niceplay.emit 'error:hide'
     @playerView.setFile(url)
 
   play: =>
