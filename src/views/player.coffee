@@ -42,7 +42,7 @@ class PlayerView extends View
     @on 'click', '.vjs-fullscreen-control', () ->
       niceplay.emit('!window:toggle-fullscreen')
 
-    @on 'dblclick', () ->
+    @on 'dblclick', 'video', () ->
       niceplay.emit('!window:toggle-fullscreen')
 
   setFile: (url, play = true) ->
