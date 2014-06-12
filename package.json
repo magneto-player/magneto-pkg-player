@@ -1,5 +1,5 @@
 {
-  "name": "niceplay-pkg-player",
+  "name": "magneto-pkg-player",
   "version": "0.0.5",
   "main": "lib/pkg.js",
   "scripts": {

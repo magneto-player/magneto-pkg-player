@@ -1,5 +1,5 @@
 
-{View} = niceplay.Views
+{View} = magneto.Views
 videojs = require '../../vendor/videojsplugins'
 
 
@@ -20,7 +20,7 @@ class PlayerView extends View
   @content: ->
     @div id: 'player', =>
       @video
-        class: 'video-js vjs-niceplay-skin'
+        class: 'video-js vjs-magneto-skin'
         controls: true
         preload: 'auto'
         width: '100%'
@@ -34,16 +34,16 @@ class PlayerView extends View
         customSubtitles: {}
     )
     @player.ready ->
-      niceplay.emit('player:ready')
+      magneto.emit('player:ready')
 
     @player.on 'error', (error) ->
-      niceplay.emit('error:new', videoErrorMessage(error))
+      magneto.emit('error:new', videoErrorMessage(error))
 
     @on 'click', '.vjs-fullscreen-control', () ->
-      niceplay.emit('!window:toggle-fullscreen')
+      magneto.emit('!window:toggle-fullscreen')
 
     @on 'dblclick', 'video', () ->
-      niceplay.emit('!window:toggle-fullscreen')
+      magneto.emit('!window:toggle-fullscreen')
 
   setFile: (url, play = true) ->
     @video.src = url
@@ -51,7 +51,7 @@ class PlayerView extends View
 
   play: ->
     @player.play()
-    @player.on 'play', -> niceplay.emit('player:play')
+    @player.on 'play', -> magneto.emit('player:play')
 
   stop: ->
     @player.stop()

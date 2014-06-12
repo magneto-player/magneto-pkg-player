@@ -6,7 +6,7 @@ module.exports =
     Player = Player or require './player'
 
     # Init video.js
-    niceplay.stylesheets.require('video.js/dist/video-js/video-js', module.paths)
+    magneto.stylesheets.require('video.js/dist/video-js/video-js', module.paths)
 
     new Player()
 

@@ -4,17 +4,17 @@ PlayerView = require './views/player'
 class Player
   constructor: ->
     @playerView = new PlayerView
-    niceplay.workspace.append @playerView
+    magneto.workspace.append @playerView
 
-    niceplay.on 'file:new', @load
+    magneto.on 'file:new', @load
 
-    niceplay.on '!player:play', @play
-    niceplay.on '!player:pause', @pause
-    niceplay.on '!player:stop', @stop
-    niceplay.on '!player:toggle', @toggle
+    magneto.on '!player:play', @play
+    magneto.on '!player:pause', @pause
+    magneto.on '!player:stop', @stop
+    magneto.on '!player:toggle', @toggle
 
   load: (url) =>
-    niceplay.emit 'error:hide'
+    magneto.emit 'error:hide'
     @playerView.setFile(url)
 
   play: =>
